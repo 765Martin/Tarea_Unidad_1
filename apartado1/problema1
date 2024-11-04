@@ -1,0 +1,4 @@
+def dividir_lista_numeros(lista):
+    negativos = sorted([num for num in lista if num < 0])
+    positivos = sorted([num for num in lista if num > 0])
+    return negativos, positivos
