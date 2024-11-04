@@ -1,0 +1,10 @@
+def crear_conjunto():
+    numeros = input("Ingresa numeros separados por espacio: ")
+    conjunto = set(map(int, numeros.split()))
+    return conjunto
+
+def operaciones_conjuntos(conjunto1, conjunto2):
+    interseccion = conjunto1 & conjunto2
+    union = conjunto1 | conjunto2
+    diferencia_simetrica = conjunto1 ^ conjunto2
+    return interseccion, union, diferencia_simetrica
