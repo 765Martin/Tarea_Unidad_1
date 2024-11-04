@@ -1,0 +1,21 @@
+import string
+
+def contar_frecuencia_palabras(texto):
+    # Eliminar puntuación y convertir a minusculas
+    texto = texto.lower().translate(str.maketrans("", "", string.punctuation))
+    
+    # Separar en palabras
+    palabras = texto.split()
+    
+    # Contar frecuencia usando un diccionario
+    frecuencia = {}
+    for palabra in palabras:
+        if palabra in frecuencia:
+            frecuencia[palabra] += 1
+        else:
+            frecuencia[palabra] = 1
+    
+    # Ordenar el diccionario por las palabras
+    frecuencia_ordenada = dict(sorted(frecuencia.items()))
+    
+    return frecuencia_ordenada
